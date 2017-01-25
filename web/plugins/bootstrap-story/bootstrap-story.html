@@ -1,0 +1,29 @@
+
+<!-- IncidentEdit templates -->
+<%if (plugin=='IncidentEdit') {%>
+  <table class="table table-striped">
+  
+    <%
+    var Incidents = Backbone.Collection.extend({
+    })
+    
+    var incidents = new Incidents()
+    incidents.add({"time":new Date("0000"), "name":"Create"})
+    incidents.add({"time":new Date("1982-08-16"), "name":"Rashid"})
+    incidents.add({"time":new Date("2012-10-05"), "name":"Leonie"})
+    %>
+
+    
+    
+      
+    <tbody>
+      <%_.each(incidents.models, function(incident) {%>
+      <tr>
+        <td style="padding-left:2px;"><p><span class="lead">Name: <%=incident.get("name")%></span></td>
+        <td style="padding-left:2px;"><p><span class="lead">Time: <%=incident.get("time")%></span></td>
+      </tr>
+      <%})%>
+    </tbody>
+  </table>
+<%}%>
+

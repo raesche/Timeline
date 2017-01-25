@@ -1,0 +1,224 @@
+// Bootstrap core variables and mixins
+@import "../../libs/bootstrap/scss/variables";
+@import "../../libs/bootstrap/scss/mixins";
+
+/* Breakpoints definitions from bootstrap
+$grid-breakpoints: (
+  // Extra small screen / phone
+  xs: 0,
+  // Small screen / phone
+  sm: 544px,
+  // Medium screen / tablet
+  md: 768px,
+  // Large screen / desktop
+  lg: 992px,
+  // Extra large screen / wide desktop
+  xl: 1200px
+) !default;
+*/
+
+// color definitions
+$bote-blue1: #52b6ec !default;
+$bote-orange: #F65314 !default;
+$bote-green: #7CBB00 !default;
+$bote-blue: #00A1F1 !default;
+$bote-yellow: #FFBB00 !default;
+$bote-gray: #3d3d3d !default;
+
+@mixin calc($key, $value) {
+  #{$key}: -webkit-calc(#{$value});
+  #{$key}: -moz-calc(#{$value});
+  #{$key}: calc(#{$value});
+}
+
+.FormatListA4 {
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.FormatListBody  > .FormatListEntry:nth-child(even)  {
+  background-color: $gray-lightest;
+}
+
+.FormatListBody  > .FormatListEntry:nth-child(odd)  {
+  background-color: #ffffff;
+}
+
+.SubscriptionListBody  > .SubscriptionListEntry:nth-child(even)  {
+  background-color: $gray-lightest;
+}
+
+.SubscriptionListBody  > .SubscriptionListEntry:nth-child(odd)  {
+  background-color: #ffffff;
+}
+
+
+$A4Height: 297 !default;
+$A4Width: 210 !default;
+$A4MarginLeft: 10 !default;
+$A4MarginTop: 15 !default;
+
+@mixin make-a4($width:100vw) {
+  position:relative;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  width: $width;
+  height: ($width * 1.4142);
+  float:left;
+}
+
+
+@include media-breakpoint-up(xs) {
+  .A4 {
+    @include make-a4(90vw);
+  }
+  
+  .Info {
+    @include make-a4(90vw);
+    display: none;
+  }
+}
+
+@include media-breakpoint-up(sm) {
+  .A4 {
+    @include make-a4(40vw);
+  }
+  
+  .Info {
+    @include make-a4(35vw);
+    display:block;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .A4 {
+    @include make-a4(40vw);
+  }
+  
+  .Info {
+    @include make-a4(35vw);
+    display:block;
+  }
+}
+
+
+.AdvertPreview {
+  border: 1.5px dashed #0275d8;
+  background-color: rgba(255, 255, 255, 0.5);
+  background-size:contain; 
+  background-position:center; 
+  background-repeat:no-repeat; 
+  padding: 0;
+  margin: 0;
+}
+
+
+.SlideIn {
+  background-color: $bote-blue;
+  max-width: 100vw;
+  max-height: 100vh;
+  position: fixed;
+  top: 10vh;
+  left: -150vw;
+  right: auto;
+  z-index: $zindex-navbar-sticky;
+}
+
+.SlideIn.left {
+  left: -150vw;
+  right: auto;
+}
+
+.SlideIn.right {
+  right: -150vw;
+  left: auto;
+}
+
+.SlideIn.left.active {
+  left: 0;
+  right: auto;
+}
+
+.SlideIn.right.active {
+  right: 0;
+  left: auto;
+}
+
+
+$CartHeaderHeight: 50px !default;
+
+@include media-breakpoint-up(xs) {
+  .CartSlideIn {
+    width: 100vw;
+    height: 100vh;
+    max-height: 100vh;
+    max-width: 100vw;
+    top: 0;
+    background-color: $gray-lightest;
+    overflow: hidden;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .CartSlideIn {
+    width: 420px;
+    height: 620px;
+    max-height: 700px;
+    max-width: 500px;
+    top: 10vh;
+    margin: 10px;
+    border: 1px solid + $bote-gray;
+    background-color: $bote-gray;
+    overflow: hidden;
+  }
+}
+
+.CartHeader {
+  width:100%;
+  height: $CartHeaderHeight;
+  background-color: $bote-blue;
+  color:#ffffff;
+  font-size: $lead-font-size;
+  font-weight: $lead-font-weight;
+  padding: 10px;
+}
+
+
+.CartBody {
+  @include calc("height", "100% - " + $CartHeaderHeight);
+  @include calc("max-height", "100% - " + $CartHeaderHeight);
+  //max-height:calc(100% - 50px);
+  overflow-y: scroll;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  background-color: #ffffff;
+}
+
+.CartFooter {
+  width:100%;
+  background-color: $bote-gray;
+  color:#ffffff;
+  padding: 20px 25px 30px 25px; // make sure to have enought padding on bottom to avoid menu slide-in issues on small ios devices
+  border-top: 1px solid + $bote-gray;
+}
+
+.MonthSelectBody {
+  padding: 5px;
+  background-color: $gray-lighter;
+}
+
+.MonthBtn {
+  @include button-variant($btn-secondary-color, $btn-secondary-bg, $btn-secondary-border);
+  margin-top: 5px;
+}
+
+.MonthBtn.active {
+  @include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
+}
+
+.CheckBox {
+  display: inline-block;
+  white-space: nowrap;
+  cursor: pointer;
+}
+

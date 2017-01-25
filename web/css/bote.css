@@ -1,0 +1,225 @@
+/* line 17, bote.scss */
+.SbLogo {
+  font-family: canterbury;
+  font-size: 2.3rem;
+}
+
+/* line 22, bote.scss */
+.cartButton {
+  float: right;
+}
+
+/* line 26, bote.scss */
+.cartButton > i {
+  font-size: 1.6rem;
+  padding-top: 0.4rem;
+}
+
+/* line 31, bote.scss */
+.cartButton.hidden {
+  display: none;
+}
+
+@media (min-width: 544px) {
+  /* line 37, bote.scss */
+  .SbLogo {
+    font-family: canterbury;
+    font-size: 3rem;
+  }
+
+  /* line 42, bote.scss */
+  .cartButton {
+    float: right;
+  }
+
+  /* line 46, bote.scss */
+  .cartButton > i {
+    font-size: 2.5rem;
+    padding-top: .5rem;
+  }
+
+  /* line 51, bote.scss */
+  .cartButton.hidden {
+    display: none;
+  }
+}
+@media (min-width: 992px) {
+  /* line 57, bote.scss */
+  .SbLogo {
+    font-family: canterbury;
+    font-size: 4rem;
+  }
+
+  /* line 62, bote.scss */
+  .cartButton {
+    float: right;
+  }
+
+  /* line 66, bote.scss */
+  .cartButton > i {
+    font-size: 2.5rem;
+    padding-top: 1.2rem;
+  }
+
+  /* line 71, bote.scss */
+  .cartButton.hidden {
+    display: none;
+  }
+}
+/* line 78, bote.scss */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 180px;
+  z-index: 1000;
+}
+
+/* line 87, bote.scss */
+.navbar.header {
+  background-color: #F65314;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+/* line 93, bote.scss */
+.navbar.header > a:hover {
+  text-decoration: none;
+}
+
+/* line 97, bote.scss */
+.navbar.footer {
+  background-color: #222222;
+}
+
+/* line 101, bote.scss */
+.page {
+  top: 0px;
+  padding-top: 0;
+  position: relative;
+  display: none;
+  min-height: 100vh;
+}
+
+/* line 109, bote.scss */
+.page.active {
+  display: block;
+}
+
+/* line 113, bote.scss */
+.page > section:nth-child(even) {
+  background-color: #f7f7f9;
+}
+
+/* line 117, bote.scss */
+.page > section:last-child {
+  padding-bottom: 50px;
+}
+
+/* line 121, bote.scss */
+section {
+  padding-top: 60px;
+  /* required to prevent content being covered by navbar */
+  position: relative;
+}
+
+/* line 126, bote.scss */
+section:nth-of-type(even) .Icon {
+  float: right;
+}
+
+/* line 130, bote.scss */
+section.header {
+  background-color: #222222;
+  padding-top: 3.3rem;
+}
+@media (min-width: 768px) {
+  /* line 130, bote.scss */
+  section.header {
+    padding-top: 4rem;
+  }
+}
+@media (min-width: 992px) {
+  /* line 130, bote.scss */
+  section.header {
+    padding-top: 5.5rem;
+  }
+}
+
+/* line 145, bote.scss */
+.banner {
+  background-image: linear-gradient(to right, #222222, rgba(34, 34, 34, 0.5), rgba(34, 34, 34, 0.5), rgba(34, 34, 34, 0.5), #222222), url("../images/background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* line 162, bote.scss */
+.banner {
+  min-height: 30vh;
+}
+
+/* line 166, bote.scss */
+.slogan {
+  color: white;
+  text-shadow: 0px 0px 8px #000000;
+  padding-top: 7rem;
+}
+
+/* line 172, bote.scss */
+.slogan > h1 {
+  font-size: 2rem;
+}
+
+/* line 176, bote.scss */
+.slogan > h2 {
+  font-size: 1.2rem;
+}
+
+@media (min-width: 544px) {
+  /* line 182, bote.scss */
+  .banner {
+    min-height: 40vh;
+  }
+
+  /* line 186, bote.scss */
+  .slogan {
+    color: white;
+    padding-top: 12rem;
+  }
+
+  /* line 191, bote.scss */
+  .slogan > h1 {
+    font-size: 3rem;
+  }
+
+  /* line 195, bote.scss */
+  .slogan > h2 {
+    font-size: 1.8rem;
+  }
+}
+@media (min-width: 992px) {
+  /* line 201, bote.scss */
+  .banner {
+    min-height: 50vh;
+  }
+
+  /* line 205, bote.scss */
+  .slogan {
+    color: white;
+    padding-top: 23rem;
+  }
+
+  /* line 210, bote.scss */
+  .slogan > h1 {
+    font-size: 4rem;
+  }
+
+  /* line 214, bote.scss */
+  .slogan > h2 {
+    font-size: 2rem;
+  }
+}
+
+/*# sourceMappingURL=bote.css.map */

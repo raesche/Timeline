@@ -1,0 +1,219 @@
+// Bootstrap core variables and mixins
+@import "../libs/bootstrap/scss/variables";
+@import "../libs/bootstrap/scss/mixins";
+
+
+// color definitions
+$bote-blue1: #52b6ec !default;
+$bote-orange: #F65314 !default;
+$bote-green: #7CBB00 !default;
+$bote-blue: #00A1F1 !default;
+$bote-yellow: #FFBB00 !default;
+$bote-gray0: #3d3d3d !default;
+$bote-gray: #222222 !default;
+
+
+@include media-breakpoint-up(xs) {
+  .SbLogo {
+    font-family: canterbury;
+    font-size:2.3rem;
+  }
+  
+  .cartButton {
+    float:right
+  }
+  
+  .cartButton > i {
+    font-size:1.6rem;
+    padding-top: 0.4rem;
+  }
+  
+  .cartButton.hidden {
+    display: none
+  }
+}
+
+@include media-breakpoint-up(sm) {
+  .SbLogo {
+    font-family: canterbury;
+    font-size:3rem;
+  }
+  
+  .cartButton {
+    float:right
+  }
+  
+  .cartButton > i {
+    font-size:2.5rem;
+    padding-top: .5rem;
+  }
+  
+  .cartButton.hidden {
+    display: none
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .SbLogo {
+    font-family: canterbury;
+    font-size:4rem;
+  }
+  
+  .cartButton {
+    float:right
+  }
+  
+  .cartButton > i {
+    font-size:2.5rem;
+    padding-top:1.2rem;
+  }
+  
+  .cartButton.hidden {
+    display: none
+  }
+}
+
+
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 180px;
+  z-index: 1000;
+}
+
+.navbar.header {
+  background-color: $bote-orange;
+  padding-top:0;
+  padding-bottom:0;
+}
+
+.navbar.header > a:hover {
+  text-decoration: none;
+}
+
+.navbar.footer {
+  background-color: $bote-gray;
+}
+
+.page {
+  top: 0px;
+  padding-top: 0;
+  position: relative;
+  display: none;
+  min-height:100vh;
+}
+
+.page.active {
+  display: block;
+}
+
+.page > section:nth-child(even) {
+  background-color: $gray-lightest;
+}
+
+.page > section:last-child{
+  padding-bottom: 50px;
+}
+
+section {
+  padding-top: 60px;  /* required to prevent content being covered by navbar */
+  position: relative;
+}
+
+section:nth-of-type(even) .Icon{
+  float: right;
+}
+
+section.header {
+  background-color: $bote-gray;
+  @include media-breakpoint-up(xs) {
+    padding-top:3.3rem;
+  }
+  
+  @include media-breakpoint-up(md) {
+    padding-top:4rem;
+  }
+  
+  @include media-breakpoint-up(lg) {
+    padding-top:5.5rem;
+  }
+}
+
+.banner{
+  background-image:
+    linear-gradient(
+      to right,
+      rgba(red($bote-gray), green($bote-gray), blue($bote-gray), 1.0),
+      rgba(red($bote-gray), green($bote-gray), blue($bote-gray), 0.5),
+      rgba(red($bote-gray), green($bote-gray), blue($bote-gray), 0.5),
+      rgba(red($bote-gray), green($bote-gray), blue($bote-gray), 0.5),
+      rgba(red($bote-gray), green($bote-gray), blue($bote-gray), 1.0)
+    ),
+    url('../images/background.jpg');  
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+}
+
+@include media-breakpoint-up(xs) {
+  .banner {
+    min-height:30vh;
+  }
+  
+  .slogan {
+    color:white;
+    text-shadow:0px 0px 8px #000000;
+    padding-top: 7rem;
+  }
+  
+  .slogan  > h1 {
+    font-size: 2rem;
+  }
+  
+  .slogan  > h2 {
+    font-size: 1.2rem;
+  }
+}
+
+@include media-breakpoint-up(sm) {
+  .banner {
+    min-height:40vh;
+  }
+  
+  .slogan {
+    color:white;
+    padding-top: 12rem;
+  }
+  
+  .slogan  > h1 {
+    font-size: 3rem;
+  }
+  
+  .slogan  > h2 {
+    font-size: 1.8rem;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .banner {
+    min-height:50vh;
+  }
+  
+  .slogan {
+    color:white;
+    padding-top: 23rem;
+  }
+  
+  .slogan  > h1 {
+    font-size: 4rem;
+  }
+  
+  .slogan  > h2 {
+    font-size: 2rem;
+  }
+}
+
+

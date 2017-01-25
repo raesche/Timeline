@@ -1,0 +1,272 @@
+/* Breakpoints definitions from bootstrap
+$grid-breakpoints: (
+  // Extra small screen / phone
+  xs: 0,
+  // Small screen / phone
+  sm: 544px,
+  // Medium screen / tablet
+  md: 768px,
+  // Large screen / desktop
+  lg: 992px,
+  // Extra large screen / wide desktop
+  xl: 1200px
+) !default;
+*/
+.FormatListA4 {
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.FormatListBody > .FormatListEntry:nth-child(even) {
+  background-color: #f7f7f9;
+}
+
+.FormatListBody > .FormatListEntry:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+.SubscriptionListBody > .SubscriptionListEntry:nth-child(even) {
+  background-color: #f7f7f9;
+}
+
+.SubscriptionListBody > .SubscriptionListEntry:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+.A4 {
+  position: relative;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  width: 90vw;
+  height: 127.278vw;
+  float: left;
+}
+
+.Info {
+  position: relative;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  width: 90vw;
+  height: 127.278vw;
+  float: left;
+  display: none;
+}
+
+@media (min-width: 544px) {
+  .A4 {
+    position: relative;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width: 40vw;
+    height: 56.568vw;
+    float: left;
+  }
+
+  .Info {
+    position: relative;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width: 35vw;
+    height: 49.497vw;
+    float: left;
+    display: block;
+  }
+}
+@media (min-width: 768px) {
+  .A4 {
+    position: relative;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width: 40vw;
+    height: 56.568vw;
+    float: left;
+  }
+
+  .Info {
+    position: relative;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width: 35vw;
+    height: 49.497vw;
+    float: left;
+    display: block;
+  }
+}
+.AdvertPreview {
+  border: 1.5px dashed #0275d8;
+  background-color: rgba(255, 255, 255, 0.5);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 0;
+  margin: 0;
+}
+
+.SlideIn {
+  background-color: #00A1F1;
+  max-width: 100vw;
+  max-height: 100vh;
+  position: fixed;
+  top: 10vh;
+  left: -150vw;
+  right: auto;
+  z-index: 1030;
+}
+
+.SlideIn.left {
+  left: -150vw;
+  right: auto;
+}
+
+.SlideIn.right {
+  right: -150vw;
+  left: auto;
+}
+
+.SlideIn.left.active {
+  left: 0;
+  right: auto;
+}
+
+.SlideIn.right.active {
+  right: 0;
+  left: auto;
+}
+
+.CartSlideIn {
+  width: 100vw;
+  height: 100vh;
+  max-height: 100vh;
+  max-width: 100vw;
+  top: 0;
+  background-color: #f7f7f9;
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .CartSlideIn {
+    width: 420px;
+    height: 620px;
+    max-height: 700px;
+    max-width: 500px;
+    top: 10vh;
+    margin: 10px;
+    border: 1px solid#3d3d3d;
+    background-color: #3d3d3d;
+    overflow: hidden;
+  }
+}
+.CartHeader {
+  width: 100%;
+  height: 50px;
+  background-color: #00A1F1;
+  color: #ffffff;
+  font-size: 1.25rem;
+  font-weight: 300;
+  padding: 10px;
+}
+
+.CartBody {
+  height: -webkit-calc(100% - 50px);
+  height: -moz-calc(100% - 50px);
+  height: calc(100% - 50px);
+  max-height: -webkit-calc(100% - 50px);
+  max-height: -moz-calc(100% - 50px);
+  max-height: calc(100% - 50px);
+  overflow-y: scroll;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  background-color: #ffffff;
+}
+
+.CartFooter {
+  width: 100%;
+  background-color: #3d3d3d;
+  color: #ffffff;
+  padding: 20px 25px 30px 25px;
+  border-top: 1px solid#3d3d3d;
+}
+
+.MonthSelectBody {
+  padding: 5px;
+  background-color: #eceeef;
+}
+
+.MonthBtn {
+  color: #373a3c;
+  background-color: #fff;
+  border-color: #ccc;
+  margin-top: 5px;
+}
+.MonthBtn:hover {
+  color: #373a3c;
+  background-color: #e6e6e6;
+  border-color: #adadad;
+}
+.MonthBtn:focus, .MonthBtn.focus {
+  color: #373a3c;
+  background-color: #e6e6e6;
+  border-color: #adadad;
+}
+.MonthBtn:active, .MonthBtn.active, .open > .MonthBtn.dropdown-toggle {
+  color: #373a3c;
+  background-color: #e6e6e6;
+  border-color: #adadad;
+  background-image: none;
+}
+.MonthBtn:active:hover, .MonthBtn:active:focus, .MonthBtn:active.focus, .MonthBtn.active:hover, .MonthBtn.active:focus, .MonthBtn.active.focus, .open > .MonthBtn.dropdown-toggle:hover, .open > .MonthBtn.dropdown-toggle:focus, .open > .MonthBtn.dropdown-toggle.focus {
+  color: #373a3c;
+  background-color: #d4d4d4;
+  border-color: #8c8c8c;
+}
+.MonthBtn.disabled:focus, .MonthBtn.disabled.focus, .MonthBtn:disabled:focus, .MonthBtn:disabled.focus {
+  background-color: #fff;
+  border-color: #ccc;
+}
+.MonthBtn.disabled:hover, .MonthBtn:disabled:hover {
+  background-color: #fff;
+  border-color: #ccc;
+}
+
+.MonthBtn.active {
+  color: #fff;
+  background-color: #0275d8;
+  border-color: #0275d8;
+}
+.MonthBtn.active:hover {
+  color: #fff;
+  background-color: #025aa5;
+  border-color: #01549b;
+}
+.MonthBtn.active:focus, .MonthBtn.active.focus {
+  color: #fff;
+  background-color: #025aa5;
+  border-color: #01549b;
+}
+.MonthBtn.active:active, .MonthBtn.active.active, .open > .MonthBtn.active.dropdown-toggle {
+  color: #fff;
+  background-color: #025aa5;
+  border-color: #01549b;
+  background-image: none;
+}
+.MonthBtn.active:active:hover, .MonthBtn.active:active:focus, .MonthBtn.active:active.focus, .MonthBtn.active.active:hover, .MonthBtn.active.active:focus, .MonthBtn.active.active.focus, .open > .MonthBtn.active.dropdown-toggle:hover, .open > .MonthBtn.active.dropdown-toggle:focus, .open > .MonthBtn.active.dropdown-toggle.focus {
+  color: #fff;
+  background-color: #014682;
+  border-color: #01315a;
+}
+.MonthBtn.active.disabled:focus, .MonthBtn.active.disabled.focus, .MonthBtn.active:disabled:focus, .MonthBtn.active:disabled.focus {
+  background-color: #0275d8;
+  border-color: #0275d8;
+}
+.MonthBtn.active.disabled:hover, .MonthBtn.active:disabled:hover {
+  background-color: #0275d8;
+  border-color: #0275d8;
+}
+
+.CheckBox {
+  display: inline-block;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=bootstrap-bote.css.map */
